@@ -1,0 +1,17 @@
+:root {
+  --color-violet: #5f4b8b;
+  --color-white: white;
+  --color-purple: #290a59;
+  --color-blue: #d4dff3;
+  --color-yellow: #f9e88c;
+  --color-lightyellow: #fff4de;
+  --color-red: #f16b68;
+}
+
+/* width img / 2 = ...px */
+/* ...px / 16 = ...em */
+@custom-media --xs screen and (min-width: 0);
+@custom-media --sm screen and (min-width: 320px);
+@custom-media --md screen and (min-width: 768px);
+@custom-media --lg screen and (min-width: 1024px);
+@custom-media --xl screen and (min-width: 1440px);
