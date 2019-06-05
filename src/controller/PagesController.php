@@ -19,4 +19,12 @@ class PagesController extends Controller {
       $this->set('title', 'Genres');
       $this->set('currentPage', 'genres');
   }
+    public function emotie(){
+      $this->set('title', 'Emotie');
+      $this->set('currentPage', 'emotie');
+
+      if (!empty($_GET['genre'])) {
+        print("hi");
+      }
+  }
 }

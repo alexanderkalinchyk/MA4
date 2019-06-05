@@ -12,13 +12,9 @@ $routes = array(
     'controller' => 'Pages',
     'action' => 'genres'
   ),
-  'voorstellingen' => array(
-      'controller' => 'Voorstellingen',
-      'action' => 'voorstellingen'
-  ),
-  'details' => array(
-      'controller' => 'Voorstellingen',
-      'action' => 'details'
+  'emotie' => array(
+    'controller' => 'Pages',
+    'action' => 'emotie'
   )
 );
 
