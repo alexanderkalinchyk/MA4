@@ -5,7 +5,7 @@
             <li>
                 <h1>Kies jouw verhaal</h1>
             </li>
-            <li><a href="#">terug naar start</a></li>
+            <li><a href="?page=home">terug naar start</a></li>
         </ul>
     </nav>
 </header>
@@ -17,4 +17,3 @@
         <a href="index.php?page=emotie&amp;genre=fantasie" class="genres__btn">Fantasie</a>
     </div>
 </main>
-<script src="js/genres.js"></script>
