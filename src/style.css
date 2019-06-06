@@ -6,6 +6,7 @@
 body {
   font-family: sans-serif;
   height: 100%;
+  font-size: 2rem;
 }
 
 .page1__video {
@@ -15,4 +16,8 @@ body {
 .song__container {
   width: 50%;
   background-color: lightgray;
+}
+
+.song__article {
+  background-color: gray;
 }

@@ -10,12 +10,16 @@
     </nav>
 </header>
 <main>
-    <?php foreach($audio as $audioItem){ ?>
+    <?php
+    $i = -1;
+    foreach($audio as $audioItem){
+    $i++
+     ?>
     <article class="song__article">
         <div class="song__container">
-            <span> <?php echo $audioItem['audio_name']; ?></span>
+            <input value="<?php echo $audioItem['audio_name']; ?>" type="hidden">
             <button class="play-song">Play</button>
-            <div id="waveform"></div>
+            <div id="waveform<?php echo $i; ?>"></div>
             <button class="bekijk">Bekijk</button>
         </div>
         <a href="#">Ik neem deze</a>
