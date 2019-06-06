@@ -17,7 +17,7 @@
   };
   const init = () => {
     const $play = document.querySelector(`.play-song`);
-
+    //load song name from php to text, then read value into js to load
     wavesurfer.load('assets/audio/test.mp3');
     wavesurfer.on('ready', function() {
       $play.addEventListener(`click`, handleClickPlaybtn);

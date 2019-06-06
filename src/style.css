@@ -11,3 +11,8 @@ body {
 .page1__video {
   width: 50%;
 }
+
+.song__container {
+  width: 50%;
+  background-color: lightgray;
+}

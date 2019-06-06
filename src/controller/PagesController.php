@@ -1,14 +1,15 @@
 <?php
 
 require_once __DIR__ . '/Controller.php';
+require_once __DIR__ . '/../dao/GenreDAO.php';
 
 class PagesController extends Controller {
 
-    //private $tourDAO;
+    private $genreDAO;
     //private $voorstellingDAO;
 
     function __construct() {
-     //   $this->tourDAO = new TourDAO();
+     $this->genreDAO = new GenreDAO();
      //$this->voorstellingDAO = new VoorstellingDAO();
     }
     public function index(){
@@ -24,7 +25,9 @@ class PagesController extends Controller {
       $this->set('currentPage', 'emotie');
 
       if (!empty($_GET['genre'])) {
-        print("hi");
+          print($_GET['genre']);
+          $audio = $this->genreDAO->selectAudioByGenre($_GET['genre']);
+          $this->set('audio', $audio);
       }
   }
 }
