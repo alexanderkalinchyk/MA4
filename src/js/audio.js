@@ -1,5 +1,6 @@
 {
   const wavesurfer = [];
+  const player = [];
   const toggle = [];
 
   const handleClickPlaybtn = (e, i) => {
@@ -32,7 +33,8 @@
       wavesurfer[i] = WaveSurfer.create({
         container: `#waveform${i}`
       });
-      wavesurfer[i].load('assets/audio/test1.mp3');
+      const $song = $article[i].querySelector(`.audio-name`).value;
+      wavesurfer[i].load(`assets/audio/${$song}.mp3`);
       wavesurfer[i].on('ready', function() {
         $play[i].addEventListener(
           `click`,
@@ -43,6 +45,7 @@
         );
       });
       toggle[i] = 'pause';
+      player[i] = new Plyr(`#player${i}`);
     }
     //load song name from php to text, then read value into js to load
   };

@@ -28,6 +28,15 @@ class PagesController extends Controller {
           print($_GET['genre']);
           $audio = $this->genreDAO->selectAudioByGenre($_GET['genre']);
           $this->set('audio', $audio);
+          $this->set('genre', $_GET['genre']);
+      }
+  }
+    public function clips(){
+      $this->set('title', 'Clips');
+      $this->set('currentPage', 'clips');
+
+      if (!empty($_GET['genre']) && !empty($_GET['song'])) {
+        $this->set('genre', $_GET['genre']);
       }
   }
 }

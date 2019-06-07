@@ -15,6 +15,10 @@ $routes = array(
   'emotie' => array(
     'controller' => 'Pages',
     'action' => 'emotie'
+  ),
+  'clips' => array(
+    'controller' => 'Pages',
+    'action' => 'clips'
   )
 );
 
