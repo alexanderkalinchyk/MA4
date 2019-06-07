@@ -19,10 +19,12 @@
         <div class="song__container">
             <input class="audio-name" value="<?php echo $audioItem['audio_name']; ?>" type="hidden">
             <button class="play-song">Play</button>
-                <audio controls>
-              <source src="assets/audio/test1.mp3" type="audio/mp3">
-            Your browser does not support the audio element.
-            </audio>
+            <div class="gap-example<?php echo $i; ?>">
+                <audio>
+                    <source src="assets/audio/test1.mp3" type="audio/mp3">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
             <div id="waveform<?php echo $i; ?>"></div>
             <button class="bekijk">Bekijk</button>
             <div class="page1__video">
@@ -38,59 +40,65 @@
   }
     ?>
 </main>
+<script src="https://cdn.jsdelivr.net/gh/greghub/green-audio-player/dist/js/green-audio-player.min.js"></script>
 <script src="https://unpkg.com/wavesurfer.js"></script>
 <script src="https://cdn.plyr.io/3.5.4/plyr.js"></script>
 <script>
 {
-  const wavesurfer = [];
-  const player = [];
-  const toggle = [];
+    const btn = [];
+    const vidPlayer = [];
+    const audioPlayer = [];
+    const toggle = [];
 
-  const handleClickPlaybtn = (e, i) => {
-    const $btn = e.currentTarget;
-    if (toggle[i] === 'pause') {
-      for (let j = 0;j < toggle.length;j ++) {
-        if (j !== i) {
-          toggle[j] = 'pause';
-          wavesurfer[j].pause();
-          const $otherBtn = document.querySelectorAll(`.play-song`);
-          $otherBtn.forEach(btn => {
-            btn.textContent = 'Play';
-          });
-          $btn.textContent = 'Pause';
+    const handleClickPlaybtn = (e, i) => {
+        const $btn = e.currentTarget;
+        $btnParent = $btn.parentElement
+        const $currentPlayer = $btnParent.querySelector(`audio`);
+        const $currentIcon = $btnParent.querySelector(`.play-pause-btn__icon`);
+        if (toggle[i] === 'pause') {
+            for (let j = 0; j < toggle.length; j++) {
+                if (j !== i) {
+                    toggle[j] = 'pause';
+                    const $otherPlayers = document.querySelectorAll(`audio`);
+                    $otherPlayers.forEach(player => {
+                        $icon = player.parentElement.querySelector(`.play-pause-btn__icon`);
+                        $icon.setAttribute(`d`, "M18 12L0 24V0");
+                        console.log($icon);
+                        if (player.paused == false) {
+                            player.pause();
+                        }
+                    });
+                    $currentPlayer.play();
+                    $currentIcon.setAttribute(`d`, "M0 0h6v24H0zM12 0h6v24h-6z");
+                }
+            }
+            toggle[i] = 'play';
+        } else {
+            toggle[i] = 'pause';
         }
-      }
-      wavesurfer[i].play();
-      toggle[i] = 'play';
-    } else {
-      wavesurfer[i].pause();
-      toggle[i] = 'pause';
-      $btn.textContent = 'Play';
-    }
-  };
-  const init = () => {
-    const $play = document.querySelectorAll(`.play-song`);
-    const $article = document.querySelectorAll(`.song__article`);
-    for (let i = 0;i < $article.length;i ++) {
-      console.log(`#waveform${i}`);
-      wavesurfer[i] = WaveSurfer.create({
-        container: `#waveform${i}`
-      });
-      const $song = $article[i].querySelector(`.audio-name`).value;
-      wavesurfer[i].load(`assets/audio/${$song}.mp3`);
-      wavesurfer[i].on('ready', function() {
-        $play[i].addEventListener(
-          `click`,
-          function() {
-            handleClickPlaybtn(event, i);
-          },
-          false
-        );
-      });
-      toggle[i] = 'pause';
-      player[i] = new Plyr(`#player${i}`);
-    }
-  };
-  init();
+    };
+
+    const init = () => {
+
+        const $play = document.querySelectorAll(`.play-song`);
+        const $article = document.querySelectorAll(`.song__article`);
+        for (let i = 0; i < $article.length; i++) {
+            audioPlayer[i] = new GreenAudioPlayer(`.gap-example${i}`);
+
+            btn[i] = $article[i].querySelector(`.play-pause-btn`);
+
+            btn[i].addEventListener(
+                `click`,
+                function() {
+                    handleClickPlaybtn(event, i);
+                },
+                false
+            );
+
+            toggle[i] = 'pause';
+            vidPlayer[i] = new Plyr(`#player${i}`);
+        }
+    };
+    init();
 }
 </script>
