@@ -17,15 +17,13 @@
      ?>
     <article class="song__article">
         <div class="song__container">
-            <input class="audio-name" value="<?php echo $audioItem['audio_name']; ?>" type="hidden">
             <button class="play-song">Play</button>
             <div class="gap-example<?php echo $i; ?>">
                 <audio>
-                    <source src="assets/audio/test1.mp3" type="audio/mp3">
+                    <source src="assets/audio/<?php echo $audioItem['audio_name']; ?>.mp3" type="audio/mp3">
                     Your browser does not support the audio element.
                 </audio>
             </div>
-            <div id="waveform<?php echo $i; ?>"></div>
             <button class="bekijk">Bekijk</button>
             <div class="page1__video">
                 <video poster="assets/img/test.jpg" id="player<?php echo $i; ?>" playsinline controls loop>
@@ -41,7 +39,6 @@
     ?>
 </main>
 <script src="https://cdn.jsdelivr.net/gh/greghub/green-audio-player/dist/js/green-audio-player.min.js"></script>
-<script src="https://unpkg.com/wavesurfer.js"></script>
 <script src="https://cdn.plyr.io/3.5.4/plyr.js"></script>
 <script>
 {

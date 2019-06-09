@@ -2,15 +2,16 @@
 
 require_once __DIR__ . '/Controller.php';
 require_once __DIR__ . '/../dao/GenreDAO.php';
+require_once __DIR__ . '/../dao/ClipDAO.php';
 
 class PagesController extends Controller {
 
     private $genreDAO;
-    //private $voorstellingDAO;
+    private $clipDAO;
 
     function __construct() {
      $this->genreDAO = new GenreDAO();
-     //$this->voorstellingDAO = new VoorstellingDAO();
+     $this->clipDAO = new ClipDAO();
     }
     public function index(){
         $this->set('title', 'Home');
@@ -36,7 +37,10 @@ class PagesController extends Controller {
       $this->set('currentPage', 'clips');
 
       if (!empty($_GET['genre']) && !empty($_GET['song'])) {
+        $clip = $this->clipDAO->selectClipsByGenre($_GET['genre']);
         $this->set('genre', $_GET['genre']);
+        $this->set('clip', $clip);
+        $this->set('song', $_GET['song']);
       }
   }
 }

@@ -22,3 +22,11 @@ body {
   background-color: gray;
   margin-top: 1rem;
 }
+
+.clip__thumbnail img {
+  width: 10rem;
+}
+
+.clip__preview {
+  width: 50%;
+}
