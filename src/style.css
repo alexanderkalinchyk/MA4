@@ -29,4 +29,20 @@ body {
 
 .clip__preview {
   width: 50%;
+  margin: 2rem;
+}
+
+.border {
+  border: .5rem solid pink;
+  margin: 1rem;
+}
+
+.thumbnail__counter {
+  padding: 1rem;
+  border: .2rem solid black;
+  border-radius: 5rem;
+}
+
+.flex {
+  display: flex;
 }

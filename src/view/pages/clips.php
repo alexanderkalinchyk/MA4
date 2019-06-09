@@ -9,18 +9,19 @@
         </ul>
     </nav>
 </header>
-<main>
+<main class="flex">
     <section class="clip__list">
         <?php foreach($clip as $clipThumbnail){ ?>
         <article class="clip__thumbnail">
             <img class="thumbnail__image" src="assets/img/<?php echo $clipThumbnail['clip_name']; ?>.jpg">
-            <button class="thumbnail__add">+</button>
+            <input type="hidden" class="clip-name" value="assets/vids/<?php echo $clipThumbnail['clip_name']; ?>.mp4">
+            <span class="thumbnail__counter">+</span>
         </article>
         <?php } ?>
     </section>
     <section class="clip__preview">
         <video poster="assets/img/test.jpg" id="clip_preview" playsinline controls loop>
-            <source src="assets/vids/test1.mp4" type="video/mp4" />
+            <source src="" type="video/mp4" />
         </video>
     </section>
     <section class="clip__song">
@@ -38,6 +39,45 @@
 <script src="https://cdn.jsdelivr.net/gh/greghub/green-audio-player/dist/js/green-audio-player.min.js"></script>
 <script src="https://cdn.plyr.io/3.5.4/plyr.js"></script>
 <script>
-const player = new Plyr('#clip_preview');
-const audioPlayer = new GreenAudioPlayer(`.gap-example`);
+{
+    let thumbnailCounter = [];
+    let iCounter = 0;
+
+    const handleClickThumbnail = (e, i, selectedBoolean) => {
+        $counterLabel = e.currentTarget.parentElement.querySelector(`.thumbnail__counter`);
+        $video = document.querySelector(`#clip_preview`);
+
+        if (!e.currentTarget.classList.contains(`border`)) {
+            if (iCounter < 3) {
+                e.currentTarget.classList.add(`border`);
+                iCounter++;
+                if (thumbnailCounter.length == 3) {
+                    thumbnailCounter.sort();
+                }
+                if (thumbnailCounter.length != 0) {
+                    $counterLabel.textContent = thumbnailCounter[0];
+                    thumbnailCounter.shift();
+                } else {
+                    $counterLabel.textContent = iCounter;
+                }
+                $video.setAttribute(`src`, e.currentTarget.parentElement.querySelector(`.clip-name`).value);
+            }
+        } else {
+            e.currentTarget.classList.remove(`border`);
+            thumbnailCounter.push($counterLabel.textContent);
+            $counterLabel.textContent = "+";
+            iCounter--;
+        }
+
+    };
+    const init = () => {
+        const player = new Plyr('#clip_preview');
+        const audioPlayer = new GreenAudioPlayer(`.gap-example`);
+        const $thumbnails = document.querySelectorAll(`.thumbnail__image`);
+        $thumbnails.forEach(thumbnail => {
+            thumbnail.addEventListener(`click`, handleClickThumbnail);
+        });
+    };
+    init();
+}
 </script>

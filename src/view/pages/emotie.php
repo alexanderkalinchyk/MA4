@@ -23,6 +23,10 @@
                     <source src="assets/audio/<?php echo $audioItem['audio_name']; ?>.mp3" type="audio/mp3">
                     Your browser does not support the audio element.
                 </audio>
+                <a
+                    href="index.php?page=clips&amp;genre=<?php echo $genre; ?>&amp;song=<?php echo $audioItem['audio_name']; ?>">Ik
+                    neem deze
+                </a>
             </div>
             <button class="bekijk">Bekijk</button>
             <div class="page1__video">
@@ -31,8 +35,6 @@
                 </video>
             </div>
         </div>
-        <a href="index.php?page=clips&amp;genre=<?php echo $genre; ?>&amp;song=<?php echo $audioItem['audio_name']; ?>">Ik
-            neem deze</a>
     </article>
     <?php
   }
