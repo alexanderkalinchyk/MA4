@@ -33,7 +33,10 @@
         </div>
     </section>
     <section class="clip__selection"></section>
-    <section class="clip__title"></section>
+    <section class="clip__title">
+        <label>titel</label>
+        <input type="text">
+    </section>
 
 </main>
 <script src="https://cdn.jsdelivr.net/gh/greghub/green-audio-player/dist/js/green-audio-player.min.js"></script>
