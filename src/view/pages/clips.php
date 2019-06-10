@@ -32,7 +32,9 @@
             </audio>
         </div>
     </section>
-    <section class="clip__selection"></section>
+    <section class="clip__selection">
+
+    </section>
     <section class="clip__title">
         <label>titel</label>
         <input type="text">
@@ -46,7 +48,11 @@
     let thumbnailCounter = [];
     let iCounter = 0;
 
-    const handleClickThumbnail = (e, i, selectedBoolean) => {
+    const addSelectedThumbnail = imgSrc => {
+        console.log(imgSrc);
+    };
+
+    const handleClickThumbnail = e => {
         $counterLabel = e.currentTarget.parentElement.querySelector(`.thumbnail__counter`);
         $video = document.querySelector(`#clip_preview`);
 
@@ -63,6 +69,8 @@
                 } else {
                     $counterLabel.textContent = iCounter;
                 }
+                const $imgSrc = e.currentTarget.getAttribute(`src`);
+                addSelectedThumbnail($imgSrc);
                 $video.setAttribute(`src`, e.currentTarget.parentElement.querySelector(`.clip-name`).value);
             }
         } else {
