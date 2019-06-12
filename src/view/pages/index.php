@@ -1,4 +1,12 @@
 <main>
+    <nav class="site-header">
+      <a class="active"><span>Welkom</span></a>
+      <a><span>Genre</span></a>
+      <a><span>Emotie</span></a>
+      <a><span>Verhaal</span></a>
+      <a><span>Vertel</span></a>
+      <div class="line"></div>
+    </nav>
     <aside class="sidebar">
       <br>
       <h1 class="logo"><span>videOpera</span></h1>
@@ -11,11 +19,12 @@
         </div>
         <div class="page1__box">
           <div class="page1__textbox">
-            <h2>Opera & Ballet<br>zie je meer dan je denkt</h2>
+            <h2 class="page1__textbox--titel">Opera & Ballet<br>zie je meer dan je denkt</h2>
+            <hr>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
+            <a class="page1__box--btn" href="?page=genres">Creëer jouw verhaal ⟶</a>
           </div>
         </div>
-        <a href="?page=genres">Creer jouw verhaal</a>
 
     </div>
 </main>

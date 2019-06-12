@@ -8,13 +8,15 @@ body {
   height: 100%;
   font-size: 2rem;
   background: linear-gradient(135deg, #a21934 48%, #50142d 100%);
+  color: #282627;
 }
 
 main {
   width: 100%;
   height: 100%;
-  background: url(assets/img/clouds.png) no-repeat center center fixed;
-  background-size: 100%;
+  background-image: url(assets/img/clouds.png);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .logo {
@@ -22,7 +24,8 @@ main {
   margin-left: 8%;
   width: 25rem;
   height: 15rem;
-  background: url(assets/img/logo_bl.png) no-repeat;
+  background-image: url(assets/img/logo_bl.png);
+  background-repeat: no-repeat;
   background-size: 20rem;
 }
 
@@ -44,19 +47,23 @@ main {
 }
 
 .page1__video {
-  width: 70%;
   position: fixed;
   bottom: 0%;
 }
 
+.plyr--video {
+  width: 80vw;
+  height: 75vh;
+}
+
 .page1__box {
   background-color: rgba(134, 23, 50, .8);
-  width: 60rem;
+  width: 55rem;
   height: 40rem;
   position: relative;
   z-index: 1;
   margin-left: 110rem;
-  margin-top: 32rem;
+  margin-top: 38vh;
   display: flex;
   justify-content: flex-end;
 }
@@ -67,8 +74,42 @@ main {
   background-size: 115%;
   background-position-y: -2rem;
   background-position-x: -2rem;
+  width: 42rem;
+  font-weight: lighter;
+  font-size: 1.4rem;
+  padding: 2rem;
+  line-height: 3rem;
+}
 
-  width: 45rem;
+.page1__textbox--titel {
+  font-size: 3rem;
+  line-height: 5rem;
+  padding-top: 4rem;
+  padding-bottom: 2rem;
+}
+
+.page1__textbox hr {
+  border: none;
+  border-top: .1rem solid #a21934;
+  width: 4rem;
+  margin-left: 0;
+  padding-bottom: 1rem;
+}
+
+.page1__textbox p {
+  padding-bottom: 5rem;
+}
+
+.page1__box--btn {
+  text-decoration: none;
+  font-size: 2rem;
+  color: white;
+  padding: 2.5rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  background-color: #a21934;
+  margin-left: 10rem;
+  border: .1rem solid white;
 }
 
 .plyr__control--overlaid {
@@ -81,6 +122,12 @@ main {
 
 .plyr--full-ui input[type='range'] {
   color: rgba(80, 20, 45, 1);
+}
+
+.plyr--video .plyr__control.plyr__tab-focus,
+.plyr--video .plyr__control:hover,
+.plyr--video .plyr__control[aria-expanded='true'] {
+  background: rgba(80, 20, 45, 1);
 }
 
 .song__container {
