@@ -43,4 +43,13 @@ class PagesController extends Controller {
         $this->set('song', $_GET['song']);
       }
   }
+  public function final(){
+    $this->set('title', 'Jouw verhaal');
+    $this->set('currentPage', 'clips');
+
+   if(!empty($_POST))  {
+    print_r($_POST);
+   }
+
+  }
 }

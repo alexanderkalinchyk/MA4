@@ -19,6 +19,10 @@ $routes = array(
   'clips' => array(
     'controller' => 'Pages',
     'action' => 'clips'
+  ),
+  'final' => array(
+    'controller' => 'Pages',
+    'action' => 'final'
   )
 );
 
