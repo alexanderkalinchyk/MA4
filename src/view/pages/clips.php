@@ -13,7 +13,7 @@
     <section class="clip__list">
         <?php foreach($clip as $clipThumbnail){ ?>
         <article class="clip__thumbnail">
-            <img class="thumbnail__image" src="assets/img/<?php echo $clipThumbnail['clip_name']; ?>.jpg">
+            <img class="thumbnail__image" src="assets/img/<?php echo $clipThumbnail['clip_name']; ?>.jpg" alt="thumbnail image">
             <input type="hidden" class="clip-name" value="assets/vids/<?php echo $clipThumbnail['clip_name']; ?>.mp4">
             <span class="thumbnail__counter">+</span>
         </article>

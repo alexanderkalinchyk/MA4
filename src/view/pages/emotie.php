@@ -10,6 +10,10 @@
     </nav>
 </header>
 <main>
+  <section>
+    <h2><?php echo $genre; ?></h2>
+    <img src="assets/img/<?php echo $genre; ?>.png" alt="genre image">
+  </section>
     <?php
     $i = -1;
     foreach($audio as $audioItem){
@@ -24,14 +28,14 @@
                     <source src="assets/audio/<?php echo $audioItem['audio_name']; ?>.mp3" type="audio/mp3">
                     Your browser does not support the audio element.
                 </audio>
-                <a
+                <button class="bekijk">Video</button>
+            </div>
+            <a
                     href="index.php?page=clips&amp;genre=<?php echo $genre; ?>&amp;song=<?php echo $audioItem['audio_name']; ?>">Ik
                     neem deze
                 </a>
-            </div>
-            <button class="bekijk">Bekijk</button>
             <div class="">
-                <video poster="assets/img/test.jpg" id="player<?php echo $i; ?>" playsinline controls loop>
+                <video poster="assets/img/thumbnails/<?php echo $audioItem['audio_name']; ?>.jpg" id="player<?php echo $i; ?>" playsinline controls loop>
                     <source src="assets/vids/<?php echo $audioItem['audio_name']; ?>.mp4" type="video/mp4" />
                 </video>
             </div>

@@ -26,7 +26,6 @@ class PagesController extends Controller {
       $this->set('currentPage', 'emotie');
 
       if (!empty($_GET['genre'])) {
-          print($_GET['genre']);
           $audio = $this->genreDAO->selectAudioByGenre($_GET['genre']);
           $this->set('audio', $audio);
           $this->set('genre', $_GET['genre']);
