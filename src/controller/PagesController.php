@@ -45,7 +45,7 @@ class PagesController extends Controller {
   }
   public function final(){
     $this->set('title', 'Jouw verhaal');
-    $this->set('currentPage', 'clips');
+    $this->set('currentPage', 'final');
 
    if(!empty($_POST))  {
       $this->set('clip1', $_POST["clip1"]);
@@ -57,5 +57,9 @@ class PagesController extends Controller {
       $this->set('bestaandeClip', $bestaandeClip);
    }
 
+  }
+  public function facebook(){
+    $this->set('title', 'Facebook Share');
+    $this->set('currentPage', 'facebook');
   }
 }

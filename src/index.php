@@ -23,6 +23,10 @@ $routes = array(
   'final' => array(
     'controller' => 'Pages',
     'action' => 'final'
+  ),
+  'facebook' => array(
+    'controller' => 'Pages',
+    'action' => 'facebook'
   )
 );
 
