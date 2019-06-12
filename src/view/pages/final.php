@@ -28,6 +28,13 @@
   <section>
       <video poster="" id="bestaande_verhaal" controls class="video-player" src="assets/vids/<?php echo $bestaandeClip["clip_name"]; ?>.mp4" ></video>
   </section>
+  <section>
+      <a href="index.php?page=facebook"
+    onclick="window.open('index.php?page=facebook',
+                         'newwindow',
+                         'width=500,height=800');
+              return false;">Deel je verhaal met ons</a>
+  </section>
 </main>
 <script src="https://cdn.plyr.io/3.5.4/plyr.js"></script>
 <script>
@@ -57,7 +64,10 @@
     let activeVideo = 0;
 
     document.querySelector(`.plyr--video`).addEventListener(`click`, handleClickPlayer);
-    document.querySelector(`.plyr__progress__container`).classList.add(`hidden`);
+    $controls = document.querySelectorAll(`.plyr__controls__item`);
+    $controls.forEach(control => {
+      control.classList.add(`hidden`);
+    });
 
     $vidPlayer.onended = function(e) {
       activeVideo = (++activeVideo) % myVids.length;
