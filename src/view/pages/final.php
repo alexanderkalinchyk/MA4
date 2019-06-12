@@ -16,7 +16,7 @@
     <input type="hidden" class="vids" name="clip3" value="<?php echo $clip3; ?>">
 
     <div class="gap-example hidden">
-          <audio controls loop autoplay>
+          <audio class="audio-player" controls loop>
               <source src="assets/audio/<?php echo $audio; ?>.mp3" type="audio/mp3">
               Your browser does not support the audio element.
           </audio>
@@ -32,12 +32,22 @@
 <script src="https://cdn.plyr.io/3.5.4/plyr.js"></script>
 <script>
 {
+  const handleClickPlayer = e =>{
+      $audioPlayer = document.querySelector(`.audio-player`);
+      $vidPlayer = document.querySelector(`.video-player`);
+      if(!$vidPlayer.paused){
+          $audioPlayer.play();
+      }
+      else{
+        $audioPlayer.pause();
+      }
+
+  };
   const init = () =>{
     const player = new Plyr('#jouw_verhaal');
     const player2 = new Plyr('#bestaande_verhaal');
 
     const $vidPlayer = document.querySelector(`.video-player`);
-
     const myVids = [];
 
     const $vids = document.querySelectorAll(`.vids`);
@@ -45,6 +55,9 @@
         myVids.push(video.value);
     });
     let activeVideo = 0;
+
+    document.querySelector(`.plyr--video`).addEventListener(`click`, handleClickPlayer);
+    document.querySelector(`.plyr__progress__container`).classList.add(`hidden`);
 
     $vidPlayer.onended = function(e) {
       activeVideo = (++activeVideo) % myVids.length;
