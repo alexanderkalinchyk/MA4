@@ -18,11 +18,12 @@ main {
 }
 
 .logo {
-  margin: 0 auto;
+  margin-top: 10%;
+  margin-left: 8%;
   width: 25rem;
   height: 15rem;
   background: url(assets/img/logo_bl.png) no-repeat;
-  background-size: 100%;
+  background-size: 20rem;
 }
 
 .logo span {
@@ -31,7 +32,7 @@ main {
 
 .sidebar {
   height: 100%;
-  width: 27rem;
+  width: 25rem;
   background-color: var(--color-white);
 }
 
@@ -48,9 +49,26 @@ main {
   bottom: 0%;
 }
 
+.page1__box {
+  background-color: rgba(134, 23, 50, .8);
+  width: 60rem;
+  height: 40rem;
+  position: relative;
+  z-index: 1;
+  margin-left: 110rem;
+  margin-top: 32rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
 .page1__textbox {
   background-color: white;
-  width: 50rem;
+  background-image: url(assets/img/obv1.png);
+  background-size: 115%;
+  background-position-y: -2rem;
+  background-position-x: -2rem;
+
+  width: 45rem;
 }
 
 .plyr__control--overlaid {
