@@ -19,6 +19,7 @@
         <div class="song__container">
             <button class="play-song">Play</button>
             <div class="gap-example<?php echo $i; ?>">
+                <span class="song__title"><?php echo $audioItem['audio_title']; ?></span>
                 <audio>
                     <source src="assets/audio/<?php echo $audioItem['audio_name']; ?>.mp3" type="audio/mp3">
                     Your browser does not support the audio element.
@@ -29,7 +30,7 @@
                 </a>
             </div>
             <button class="bekijk">Bekijk</button>
-            <div class="page1__video">
+            <div class="">
                 <video poster="assets/img/test.jpg" id="player<?php echo $i; ?>" playsinline controls loop>
                     <source src="assets/vids/<?php echo $audioItem['audio_name']; ?>.mp4" type="video/mp4" />
                 </video>
