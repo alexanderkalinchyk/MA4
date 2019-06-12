@@ -12,4 +12,12 @@ class ClipDAO extends DAO {
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
   }
 
+  public function selectBestaandeClipByGenre($genre){
+    $sql = "SELECT * FROM `ma4_bestaande_clips` WHERE `genre` = :genre";
+    $stmt = $this->pdo->prepare($sql);
+    $stmt->bindValue(':genre', $genre);
+    $stmt->execute();
+    return $stmt->fetch(PDO::FETCH_ASSOC);
+  }
+
 }

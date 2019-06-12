@@ -20,7 +20,7 @@
         <?php } ?>
     </section>
     <section class="clip__preview">
-        <video poster="" id="clip_preview" playsinline controls loop>
+        <video poster="" id="clip_preview" playsinline controls>
             <source src="" type="video/mp4" />
         </video>
     </section>
@@ -40,11 +40,11 @@
         <input type="hidden" value="" name="clip2" id="clip2">
         <input type="hidden" value="" name="clip3" id="clip3">
         <input type="hidden" value="<?php echo $song; ?>" id="audio1" name="audio">
+        <input type="hidden" value="<?php echo $genre; ?>" id="genre" name="genre">
         <button disabled class="submit-btn">Toon mijn resultaat</button>
     </form>
 
 </main>
-<script src="https://cdn.jsdelivr.net/gh/greghub/green-audio-player/dist/js/green-audio-player.min.js"></script>
 <script src="https://cdn.plyr.io/3.5.4/plyr.js"></script>
 <script>
 {
