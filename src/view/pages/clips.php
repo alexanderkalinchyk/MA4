@@ -20,7 +20,7 @@
         <?php } ?>
     </section>
     <section class="clip__preview">
-        <video poster="" id="clip_preview" playsinline controls loop>
+        <video poster="" id="clip_preview" playsinline controls>
             <source src="" type="video/mp4" />
         </video>
     </section>
@@ -44,7 +44,6 @@
     </form>
 
 </main>
-<script src="https://cdn.jsdelivr.net/gh/greghub/green-audio-player/dist/js/green-audio-player.min.js"></script>
 <script src="https://cdn.plyr.io/3.5.4/plyr.js"></script>
 <script>
 {

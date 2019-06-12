@@ -48,7 +48,10 @@ class PagesController extends Controller {
     $this->set('currentPage', 'clips');
 
    if(!empty($_POST))  {
-    print_r($_POST);
+      $this->set('clip1', $_POST["clip1"]);
+      $this->set('clip2', $_POST["clip2"]);
+      $this->set('clip3', $_POST["clip3"]);
+      $this->set('audio', $_POST["audio"]);
    }
 
   }

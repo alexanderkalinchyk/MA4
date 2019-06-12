@@ -10,5 +10,53 @@
     </nav>
 </header>
 <main>
-hi1
+  <section class="clip__preview">
+    <input type="hidden" class="vids" name="clip1" value="<?php echo $clip1; ?>">
+    <input type="hidden" class="vids" name="clip2" value="<?php echo $clip2; ?>">
+    <input type="hidden" class="vids" name="clip3" value="<?php echo $clip3; ?>">
+
+    <div class="gap-example hidden">
+          <audio controls loop autoplay>
+              <source src="assets/audio/<?php echo $audio; ?>.mp3" type="audio/mp3">
+              Your browser does not support the audio element.
+          </audio>
+    </div>
+
+    <video poster="" id="jouw_verhaal" playsinline controls>
+          <source src="<?php echo $clip1; ?>" type="video/mp4" class="video-player" />
+    </video>
+
+  </section>
 </main>
+<script src="https://cdn.plyr.io/3.5.4/plyr.js"></script>
+<script>
+{
+  const handleEndedVideo = e =>{
+    console.log("test2")
+  };
+  const init = () =>{
+    //const player = new Plyr('#jouw_verhaal');
+
+    const $vidPlayer = document.querySelector(`.video-player`);
+
+    const myVids = [];
+
+    const $vids = document.querySelectorAll(`.vids`);
+    $vids.forEach(video => {
+        myVids.push(video.value);
+    });
+    let activeVideo = 0;
+
+    $vidPlayer.addEventListener('click', handleEndedVideo);
+    /*
+    $vidPlayer.addEventListener('ended', function(e) {
+      console.log("test");
+      activeVideo = (++activeVideo) % myVids.length;
+      $vidPlayer.setAttribute(`src`, myVids[activeVideo]);
+
+    }); */
+
+  };
+  init();
+}
+</script>
