@@ -40,6 +40,7 @@
         <input type="hidden" value="" name="clip2" id="clip2">
         <input type="hidden" value="" name="clip3" id="clip3">
         <input type="hidden" value="<?php echo $song; ?>" id="audio1" name="audio">
+        <input type="hidden" value="<?php echo $genre; ?>" id="genre" name="genre">
         <button disabled class="submit-btn">Toon mijn resultaat</button>
     </form>
 

@@ -52,6 +52,9 @@ class PagesController extends Controller {
       $this->set('clip2', $_POST["clip2"]);
       $this->set('clip3', $_POST["clip3"]);
       $this->set('audio', $_POST["audio"]);
+      $this->set('genre', $_POST["genre"]);
+      $bestaandeClip = $this->clipDAO->selectBestaandeClipByGenre($_POST['genre']);
+      $this->set('bestaandeClip', $bestaandeClip);
    }
 
   }
