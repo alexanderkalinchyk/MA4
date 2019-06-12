@@ -1,12 +1,15 @@
-<main>
-    <nav class="site-header">
+<header class="site-header container">
+  <nav class="site-header">
       <a class="active"><span>Welkom</span></a>
       <a><span>Genre</span></a>
       <a><span>Emotie</span></a>
       <a><span>Verhaal</span></a>
       <a><span>Vertel</span></a>
       <div class="line"></div>
+      <div class="line2"></div>
     </nav>
+</header>
+<main>
     <aside class="sidebar">
       <br>
       <h1 class="logo"><span>videOpera</span></h1>

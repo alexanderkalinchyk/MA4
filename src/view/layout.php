@@ -14,7 +14,7 @@
     <script>
     WebFontConfig = {
         custom: {
-            families: ["Montserrat", "Hind"],
+            families: ["Rounded-Elegance", "Geosans", "Geosans-italic"],
             urls: ["style.css"]
         }
     };
