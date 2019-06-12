@@ -5,6 +5,8 @@
   margin-left: 18%;
   display: flex;
   justify-content: space-between;
+  font-family: Geosans;
+  letter-spacing: .4rem;
 }
 
 .site-header a {
@@ -79,13 +81,14 @@
   left: 0;
   margin: auto;
   width: 0;
-  height: .2rem;
+  height: .3rem;
   background: #50142d;
 }
 
 .site-header .line2 {
   display: block;
   position: absolute;
+  z-index: -1;
   top: 0;
   bottom: 0;
   left: 0;

@@ -10,17 +10,23 @@
     </nav>
 </header>
 <main>
-<ul>
-            <li><a href="?page=home">terug</a></li>
-            <li>
-                <h1>Kies jouw verhaal</h1>
-            </li>
-            <li><a href="?page=home">terug naar start</a></li>
-        </ul>
+  <aside class="sidebar sidebar2">
+    <ul>
+      <li><a class="sidebar2--backbtn" href="?page=home">⟵ Vorige</a></li>
+      <br>
+      <li><a href="?page=home">Begin opnieuw</a></li>
+    </ul>
+    <br>
+    <h1 class=" logo logo2"><span>videOpera</span></h1>
+  </aside>
+<section class="genres__section">
+    <h1>Kies jouw verhaal</h1>
     <div class="genres">
         <a href="index.php?page=emotie&amp;genre=komedie" class="genres__btn">Komedie</a>
         <a href="index.php?page=emotie&amp;genre=tragedie" class="genres__btn">Tragedie</a>
         <a href="index.php?page=emotie&amp;genre=romantiek" class="genres__btn">Romantiek</a>
         <a href="index.php?page=emotie&amp;genre=fantasie" class="genres__btn">Fantasie</a>
     </div>
+</section>
+
 </main>
