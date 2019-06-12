@@ -8,69 +8,51 @@
 }
 
 .site-header a {
+  cursor: default;
   position: relative;
   display: flex;
   flex-direction: column;
   text-decoration: none;
-  color: #03a9f4;
+  color: #50142d;
   text-align: center;
 }
-
 
 .site-header a span {
   display: block;
   position: absolute;
   left: 50%;
   top: 100%;
-  width: 80px;
-  margin-top: 20px;
+  width: 8rem;
+  margin-top: 2rem;
   opacity: 0;
   transform: translateX(-50%);
-  text-shadow: 1px 1px 5px rgba(0, 0, 0, .1);
-  transition: opacity .3s ease-out, bottom .5s ease;
-}
-
-.site-header a:hover > span {
-  opacity: 1;
-  top: 100%;
+  text-shadow: .1rem .1rem .1rem rgba(0, 0, 0, .1);
 }
 
 .site-header a.active > span {
-  color: #0288d1;
+  color: white;
   opacity: 1;
   top: 100%;
-}
-
-.site-header a::after {
-  content: '';
-  display: block;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 80px;
-  height: 60px;
-  transform: translate(-50%, -50%);
 }
 
 .site-header a::before {
   content: '';
   z-index: 99;
   display: block;
-  width: 5px;
-  height: 5px;
+  width: 1rem;
+  height: 1rem;
   border-radius: 50%;
   margin: auto;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, .2), 0 0 0 4px #03a9f4;
-  background: #fff;
-  transition: box-shadow .3s cubic-bezier(.75, 0, .24, 1);
+  box-shadow: 0 .2rem .4rem rgba(0, 0, 0, .2), 0 0 0 .2rem white;
+  background: #282627;
 }
 
-.site-header a:not(.active):hover::before {
-  box-shadow: 0 2px 4px rgba(0, 0, 0, .2), 0 0 0 5px #03a9f4;
+.site-header a::after {
+  background: white;
 }
 
 .site-header a.active::before {
-  box-shadow: 0 2px 4px rgba(0, 0, 0, .2), 0 0 0 10px #0288d1;
+  box-shadow: 0 .2rem .4rem rgba(0, 0, 0, .2), 0 0 0 1rem #50142d;
 }
 
 .site-header a:first-child.active ~ .line {
@@ -78,14 +60,18 @@
 }
 
 .site-header a:nth-child(2).active ~ .line {
-  width: 34%;
+  width: 25%;
 }
 
 .site-header a:nth-child(3).active ~ .line {
-  width: 66%;
+  width: 50%;
 }
 
 .site-header a:nth-child(4).active ~ .line {
+  width: 75%;
+}
+
+.site-header a:nth-child(5).active ~ .line {
   width: 100%;
 }
 
@@ -96,9 +82,7 @@
   bottom: 0;
   left: 0;
   margin: auto;
-  z-index: -1;
   width: 0;
   height: 2px;
-  background: #0288d1;
-  transition: width .5s cubic-bezier(1, 0, .5, 1.01);
+  background: #50142d;
 }

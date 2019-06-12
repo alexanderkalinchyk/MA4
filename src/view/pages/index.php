@@ -1,10 +1,10 @@
 <main>
     <nav class="site-header">
-      <a href="#" class="active"><span>Welkom</span></a>
-      <a href="#" class="active"><span>Projets</span></a>
-      <a href="#"><span>A propos</span></a>
-      <a href="#"><span>Contact</span></a>
-      <a href="#"><span>Contact</span></a>
+      <a class="active"><span>Welkom</span></a>
+      <a><span>Genre</span></a>
+      <a><span>Emotie</span></a>
+      <a><span>Verhaal</span></a>
+      <a><span>Vertel</span></a>
       <div class="line"></div>
     </nav>
     <aside class="sidebar">

@@ -8,6 +8,7 @@ body {
   height: 100%;
   font-size: 2rem;
   background: linear-gradient(135deg, #a21934 48%, #50142d 100%);
+  color: #282627;
 }
 
 main {
