@@ -15,9 +15,16 @@
 <section>
   <img src="assets/img/profile-pic.jpg">
   <span>Opera Ballet Vlaanderen</span>
-  <textarea name="" id="" cols="30" rows="10" placeholder="Say something about this"></textarea>
+  <textarea name="" id="" cols="50" rows="3" placeholder="Say something about this"></textarea>
 </section>
 <section>
   <img src="assets/img/thumbnail.jpg" alt="">
+  <div>
+    <span>Jouw verhaal</span>
+  </div>
+</section>
+<section>
+  <button class="cancel-btn">Cancel</button>
+  <button class="post-btn">Post to Facebook</button>
 </section>
 </main>

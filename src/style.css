@@ -209,3 +209,11 @@ main {
 .flex {
   display: flex;
 }
+
+textarea {
+  resize: none;
+}
+
+.song__title {
+  order: -1;
+}
