@@ -35,6 +35,13 @@
     <section class="clip__selection">
 
     </section>
+    <form class="form" method="post" action="?page=final">
+        <input type="hidden" value="" name="clip1" id="clip1">
+        <input type="hidden" value="" name="clip2" id="clip2">
+        <input type="hidden" value="" name="clip3" id="clip3">
+        <input type="hidden" value="<?php echo $song; ?>" id="audio1" name="audio">
+        <button disabled class="submit-btn">Toon mijn resultaat</button>
+    </form>
 
 </main>
 <script src="https://cdn.jsdelivr.net/gh/greghub/green-audio-player/dist/js/green-audio-player.min.js"></script>
@@ -78,6 +85,10 @@
             if($clipSelection.querySelectorAll(`.hidden`).length > 1){
                 $clipSelection.querySelector(`.hidden`).classList.remove(`hidden`);
             }
+            document.querySelector(`.submit-btn`).disabled = false;
+        }
+        else{
+          document.querySelector(`.submit-btn`).disabled = true;
         }
     };
 
@@ -94,7 +105,12 @@
             $article = document.querySelector(`.selected-thumbnail`);
             document.querySelector(`.thumbnail-plus`).classList.remove(`hidden`);
         }
-
+        if($articleCount < 3){
+          document.querySelector(`.submit-btn`).disabled = true;
+        }
+        else{
+          document.querySelector(`.submit-btn`).disabled = false;
+        }
         document.querySelector(`.${id}`).click();
     };
 
@@ -132,7 +148,19 @@
             thumbnailCounter.push($counterLabel.textContent);
             $counterLabel.textContent = "+";
             iCounter--;
+            document.querySelector(`.submit-btn`).disabled = true;
         }
+
+    };
+    const handleSubmitForm = e =>{
+        e.preventDefault();
+
+
+        document.querySelector(`#clip1`).value = document.querySelector(`.thumbnail1`).parentElement.querySelector(`.clip-name`).value;
+        document.querySelector(`#clip2`).value = document.querySelector(`.thumbnail2`).parentElement.querySelector(`.clip-name`).value;
+        document.querySelector(`#clip3`).value = document.querySelector(`.thumbnail3`).parentElement.querySelector(`.clip-name`).value;
+
+        document.querySelector(`.form`).submit();
 
     };
     const init = () => {
@@ -141,6 +169,8 @@
         $thumbnails.forEach(thumbnail => {
             thumbnail.addEventListener(`click`, handleClickThumbnail);
         });
+        const $submit = document.querySelector(`.submit-btn`);
+        $submit.addEventListener('click', handleSubmitForm);
     };
     init();
 }
