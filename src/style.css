@@ -389,12 +389,6 @@ main {
   padding-bottom: 2rem;
 }
 
-h2 {
-  font-family: Rounded-Elegance, sans-serif;
-  color: white;
-  font-size: 3rem;
-}
-
 .clip__list {
   order: 1;
   display: flex;
