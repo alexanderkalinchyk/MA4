@@ -33,8 +33,8 @@
       </div>
   </section>
   <section>
-      <a href="index.php?page=facebook"
-    onclick="window.open('index.php?page=facebook',
+      <a href="index.php?page=facebook&amp;name=<?php echo $audio; ?>"
+    onclick="window.open('index.php?page=facebook&name=<?php echo $audio; ?>',
                          'newwindow',
                          'width=500,height=800');
               return false;">Deel je verhaal met ons</a>

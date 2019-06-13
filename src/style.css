@@ -243,6 +243,10 @@ main {
   text-transform: capitalize;
 }
 
+.player__container {
+  display: flex;
+}
+
 .plyr__control--overlaid {
   background: rgba(80, 20, 45, .8) !important;
 }
@@ -262,7 +266,7 @@ main {
 }
 
 .song__container {
-  width: 50%;
+  width: 100%;
 }
 
 .clip__thumbnail img {
@@ -273,7 +277,14 @@ main {
 .emotie__clips {
   background-color: white;
   margin-top: -12.5rem;
-  padding-top: 14rem;
+  padding-top: 9rem;
+  padding-bottom: 7rem;
+}
+
+.emotie__players {
+  width: 95rem;
+  margin-left: 5rem;
+  height: 53rem;
 }
 
 .selected-thumbnail__img {
@@ -409,11 +420,30 @@ textarea {
   font-family: Rounded-Elegance, sans-serif;
 }
 
+.ik_neem_deze {
+  background-color: #a21833;
+  outline: none;
+  border: none;
+  box-shadow: 0 0 3.3rem -.4rem rgba(0, 0, 0, .52);
+  width: 21rem;
+  height: 5.5rem;
+  margin-left: 3rem;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 2rem;
+}
+
 .song__title {
   order: 0;
   color: #50142d;
   font-family: Geosans, sans-serif;
   padding: 3rem;
+}
+
+.song__article {
+  margin-top: 5rem;
 }
 
 .play-pause-btn {
@@ -430,16 +460,142 @@ textarea {
   outline: none;
   border: none;
   font-size: 2rem;
-  margin-left: 5rem;
+  margin-left: 3rem;
   margin-right: 2rem;
   text-transform: uppercase;
 }
 
 .collapsible-content {
-  padding: 0 1.8rem;
   display: none;
   overflow: hidden;
-  background-color: #f1f1f1;
 }
 
+.block {
+  display: block;
+}
 
+.none {
+  display: none;
+}
+
+.fb-main {
+  background-color: white;
+}
+
+.fb-header {
+  background-color: #3b5998;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  color: white;
+  padding: 1rem;
+}
+
+.fb-header h1 {
+  padding-left: 1rem;
+}
+
+.fb-select {
+  width: 14rem;
+  height: 2.5rem;
+  margin: 1.5rem;
+  font-weight: bold;
+  color: darkslategrey;
+  border: .1rem solid gray;
+}
+
+.fb__section1 {
+  border-bottom: .1rem solid darkgray;
+}
+
+.fb-group {
+  height: 4rem;
+  width: 9rem;
+  background-color: aliceblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+}
+
+.fb__section2 {
+  border-bottom: .1rem solid darkgray;
+  display: flex;
+}
+
+.fb__section2 input {
+  border: none;
+  width: 100%;
+  padding-left: 1rem;
+  font-size: 1.5rem;
+}
+
+.fb-profilepic {
+  width: 5rem;
+  margin: 2rem;
+}
+
+.fb__section3 {
+  display: flex;
+  align-items: center;
+  border-bottom: .1rem solid darkgray;
+}
+
+.fb-div {
+  display: flex;
+  flex-direction: column;
+}
+
+.fb-div textarea {
+  outline: none;
+  border: none;
+  padding-top: 0;
+}
+
+.fb-div span {
+  padding: 1rem 0;
+  margin-top: 2rem;
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.clip-name {
+  height: 9rem;
+  background-color: #f2f3f5;
+  padding: 2rem;
+  font-weight: bold;
+  margin-top: -.5rem;
+}
+
+.light {
+  color: slategray;
+  font-weight: lighter;
+  font-size: 1.5rem;
+}
+
+.fb__section4,
+.fb__section4 img {
+  width: 48rem;
+}
+
+.fb__section5 {
+  padding: 2rem 1rem;
+  display: flex;
+}
+
+.cancel-btn {
+  height: 2.8rem;
+  width: 7rem;
+  border-radius: .3rem;
+}
+
+.post-btn {
+  margin-left: 1rem;
+  background-color: #3b5998;
+  color: white;
+  font-weight: bold;
+  width: 39.5rem;
+  height: 3rem;
+  border-radius: .3rem;
+  text-align: center;
+}

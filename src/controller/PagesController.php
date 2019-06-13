@@ -60,5 +60,9 @@ class PagesController extends Controller {
   public function facebook(){
     $this->set('title', 'Facebook Share');
     $this->set('currentPage', 'facebook');
+
+    if (!empty($_GET['name'])) {
+      $this->set('name', $_GET['name']);
+    }
   }
 }

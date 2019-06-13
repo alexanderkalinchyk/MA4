@@ -28,7 +28,7 @@
         <img src="assets/img/<?php echo $genre; ?>.png" alt="genre image">
         <div class="header__title">
           <h3 class="emotie__genre"><?php echo $genre; ?></h3>
-          <p class="song-name"></p>
+          <p class="song-name">Kies een audio fragment</p>
       </div>
       </div>
     </div>
@@ -42,7 +42,7 @@
      ?>
     <article class="song__article">
         <div class="song__container">
-          <div>
+          <div class="player__container">
             <div class="gap-example<?php echo $i; ?>">
                 <span class="song__title"><?php echo $audioItem['audio_title']; ?></span>
                 <audio>
@@ -51,7 +51,7 @@
                 </audio>
                 <button class="bekijk">Video</button>
             </div>
-                <a
+                <a class="ik_neem_deze"
                     href="index.php?page=clips&amp;genre=<?php echo $genre; ?>&amp;song=<?php echo $audioItem['audio_name']; ?>">Ik
                     neem deze
                 </a>
@@ -111,32 +111,24 @@
 
     const handleClickVideoButton = e =>{
       e.preventDefault;
-      console.log("hi");/*
-      if(e.currentTarget.textContent == "video"){
-        e.currentTarget.textContent = "sluiten"
+      if(e.currentTarget.textContent == "Video"){
+        e.currentTarget.textContent = "Sluiten"
       }
       else{
-        e.currentTarget.textContent = "video"
+        e.currentTarget.textContent = "Video"
       }
-      const content = e.currentTarget.parentElement.parentElement.querySelector(`.collapsible-content`);
-      console.log(content);
-      if (content.style.display === "block") {
-            content.style.display = "none";
+      const content = e.currentTarget.parentElement.parentElement.parentElement.querySelector(`.collapsible-content`);
+      if (content.classList.contains("block")) {
+            content.classList.remove("block");
+            content.classList.add("none");
           } else {
-            content.style.display = "block";
+            content.classList.remove("none");
+            content.classList.add("block");
           }
-          */
+
     };
 
     const init = () => {
-
-      const coll = document.querySelectorAll(".bekijk");
-
-
-      coll.forEach(element => {
-        element.addEventListener(`click`, handleClickVideoButton);
-        console.log(element);
-      });
 
         const $play = document.querySelectorAll(`.play-song`);
         const $article = document.querySelectorAll(`.song__article`);
@@ -156,6 +148,15 @@
             toggle[i] = 'pause';
             vidPlayer[i] = new Plyr(`#player${i}`);
         }
+        $plyrPlayers = document.querySelectorAll(`.plyr--video`);
+        $plyrPlayers.forEach(element => {
+          element.classList.add(`emotie__players`)
+        });
+        const coll = document.querySelectorAll(".bekijk");
+        coll.forEach(element => {
+        element.addEventListener(`click`, handleClickVideoButton);
+        console.log(element);
+});
     };
     init();
 }
