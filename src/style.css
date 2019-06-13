@@ -230,6 +230,17 @@ main {
   width: 85%;
 }
 
+.scrolling-wrapper {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
 .clips_left {
   order: 0;
   width: 68%;
@@ -267,6 +278,11 @@ main {
   margin-top: 3rem;
   background-color: #a21833;
   color: white;
+}
+
+.submit-btn:disabled {
+  opacity: .8;
+  color: lightgray;
 }
 
 .scroll-sidebar {
