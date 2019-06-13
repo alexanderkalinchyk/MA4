@@ -309,7 +309,7 @@ main {
   background-color: white;
   margin-top: -12.5rem;
   padding-top: 9rem;
-  padding-bottom: 7rem;
+  height: 100%;
 }
 
 .emotie__players {
@@ -633,6 +633,9 @@ textarea {
   height: 3rem;
   border-radius: .3rem;
   text-align: center;
+  padding: .6rem;
+  text-decoration: none;
+  font-size: 1.5rem;
 }
 
 .final-clip1 {
