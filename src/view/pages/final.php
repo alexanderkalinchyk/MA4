@@ -9,7 +9,7 @@
         </ul>
     </nav>
 </header>
-<main>
+<main class="main final-result__main">
   <section class="clip__preview">
     <input type="hidden" class="vids" name="clip1" value="<?php echo $clip1; ?>">
     <input type="hidden" class="vids" name="clip2" value="<?php echo $clip2; ?>">
