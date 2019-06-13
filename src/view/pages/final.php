@@ -27,6 +27,10 @@
   </section>
   <section>
       <video poster="" id="bestaande_verhaal" controls class="video-player" src="assets/vids/<?php echo $bestaandeClip["clip_name"]; ?>.mp4" ></video>
+      <div>
+      <h2>Meer gelijkend dan je denkt...</h2>
+        <p><?php echo $bestaandeClip["tekst"]; ?></p>
+      </div>
   </section>
   <section>
       <a href="index.php?page=facebook"

@@ -48,8 +48,6 @@ main {
 
 .sidebar2 {
   text-align: center;
-  position: absolute;
-  z-index: -2;
   display: flex;
   flex-flow: column;
   justify-content: space-between;
@@ -181,9 +179,16 @@ main {
   margin-top: 1rem;
 }
 
-.clip__thumbnail img,
+.clip__thumbnail img {
+  width: 30rem;
+  opacity: .7;
+}
+
 .selected-thumbnail__img {
-  width: 10rem;
+  width: 23rem;
+  border: .3rem solid white;
+  border-radius: 2rem;
+  box-shadow: 0 0 3.3rem -.4rem rgba(0, 0, 0, .52);
 }
 
 .clip__preview {
@@ -191,15 +196,101 @@ main {
   margin: 2rem;
 }
 
+.clips_player {
+  width: 118rem;
+  height: 30rem;
+  border-radius: 2rem;
+}
+
 .border {
-  border: .5rem solid pink;
-  margin: 1rem;
+  border-left: .7rem solid #a21833;
+  opacity: 1 !important;
+}
+
+.clip__thumbnail {
+  position: relative;
 }
 
 .thumbnail__counter {
   padding: 1rem;
-  border: .2rem solid black;
+  position: absolute;
+  left: 1rem;
+  bottom: 1.5rem;
   border-radius: 5rem;
+  color: white;
+  background-color: #a21833;
+  width: 4rem;
+  height: 4rem;
+  text-align: center;
+}
+
+.clip__container {
+  display: flex;
+  padding-top: 15rem;
+  width: 85%;
+}
+
+.clips_left {
+  order: 0;
+  width: 68%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0 6rem;
+}
+
+.clip__selection {
+  display: flex;
+}
+
+.clip__selection article {
+  padding: 2rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.thumbnail-plus {
+  margin-left: 4rem;
+  color: #b3a2a8;
+  font-size: 7rem;
+}
+
+.submit-btn {
+  border: none;
+  box-shadow: 0 0 3.3rem -.4rem rgba(0, 0, 0, .52);
+  width: 35rem;
+  height: 6rem;
+  border-radius: 3rem;
+  font-size: 2.5rem;
+  margin-top: 3rem;
+  background-color: #a21833;
+  color: white;
+}
+
+.scroll-sidebar {
+  background: rgba(162, 24, 51, .5);
+  width: 3rem;
+  font-family: Rounded-Elegance, sans-serif;
+  color: white;
+  writing-mode: vertical-lr;
+  text-orientation: mixed;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-bottom: 2rem;
+}
+
+.clips_left h2 {
+  font-family: Rounded-Elegance, sans-serif;
+  color: white;
+  font-size: 3rem;
+}
+
+.clip__list {
+  order: 1;
+  display: flex;
 }
 
 .hidden {

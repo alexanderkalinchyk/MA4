@@ -13,6 +13,9 @@
   <section>
     <h2><?php echo $genre; ?></h2>
     <img src="assets/img/<?php echo $genre; ?>.png" alt="genre image">
+    <p class="song-name">
+
+    </p>
   </section>
     <?php
     $i = -1;
@@ -58,6 +61,9 @@
         const $btn = e.currentTarget;
         $btnParent = $btn.parentElement
         const $currentPlayer = $btnParent.querySelector(`audio`);
+        const $song_name = $btnParent.querySelector(`.song__title`).textContent;
+        document.querySelector(`.song-name`).textContent = $song_name;
+
         const $currentIcon = $btnParent.querySelector(`.play-pause-btn__icon`);
         if (toggle[i] === 'pause') {
             for (let j = 0; j < toggle.length; j++) {
@@ -67,7 +73,7 @@
                     $otherPlayers.forEach(player => {
                         $icon = player.parentElement.querySelector(`.play-pause-btn__icon`);
                         $icon.setAttribute(`d`, "M18 12L0 24V0");
-                        console.log($icon);
+                       // console.log($icon);
                         if (player.paused == false) {
                             player.pause();
                         }

@@ -9,7 +9,7 @@
       <div class="line2"></div>
     </nav>
 </header>
-<main>
+<main class="flex">
   <aside class="sidebar sidebar2">
     <ul>
       <li><a class="sidebar2--backbtn" href="?page=home">⟵ Vorige</a></li>

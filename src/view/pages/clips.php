@@ -1,39 +1,56 @@
 <header class="site-header container">
-    <nav>
-        <ul>
-            <li><a href="index.php?page=emotie&amp;genre=<?php echo $genre; ?>">terug</a></li>
-            <li>
-                <h1>Wat ga je vertellen?</h1>
-            </li>
-            <li><a href="?page=home">terug naar start</a></li>
-        </ul>
+  <nav class="site-header">
+      <a class="active"><span>Welkom</span></a>
+      <a class="active"><span>Genre</span></a>
+      <a class="active"><span>Emotie</span></a>
+      <a class="active"><span>Verhaal</span></a>
+      <a><span>Vertel</span></a>
+      <div class="line"></div>
+      <div class="line2"></div>
     </nav>
 </header>
 <main class="flex">
+<aside class="sidebar sidebar2">
+    <ul>
+      <li><a class="sidebar2--backbtn" href="index.php?page=emotie&amp;genre=<?php echo $genre; ?>">⟵ Vorige</a></li>
+      <br>
+      <li><a href="?page=home">Begin opnieuw</a></li>
+    </ul>
+    <br>
+    <h1 class=" logo logo2"><span>videOpera</span></h1>
+  </aside>
+  <div class="clip__container">
     <section class="clip__list">
-        <?php foreach($clip as $clipThumbnail){ ?>
-        <article class="clip__thumbnail">
-            <img class="thumbnail__image" src="assets/img/<?php echo $clipThumbnail['clip_name']; ?>.jpg" alt="thumbnail image">
-            <input type="hidden" class="clip-name" value="assets/vids/<?php echo $clipThumbnail['clip_name']; ?>.mp4">
-            <span class="thumbnail__counter">+</span>
-        </article>
-        <?php } ?>
-    </section>
-    <section class="clip__preview">
-        <video poster="" id="clip_preview" playsinline controls>
-            <source src="" type="video/mp4" />
-        </video>
-    </section>
-    <section class="clip__song">
-        <div class="gap-example hidden">
-            <audio controls loop autoplay>
-                <source src="assets/audio/<?php echo $song; ?>.mp3" type="audio/mp3">
-                Your browser does not support the audio element.
-            </audio>
+        <div class="scroll-sidebar">
+          SCROLL >
+        </div>
+        <div class="thumbnail__container">
+          <?php foreach($clip as $clipThumbnail){ ?>
+          <article class="clip__thumbnail">
+              <img class="thumbnail__image" src="assets/img/<?php echo $clipThumbnail['clip_name']; ?>.jpg" alt="thumbnail image">
+              <input type="hidden" class="clip-name" value="assets/vids/<?php echo $clipThumbnail['clip_name']; ?>.mp4">
+              <span class="thumbnail__counter">+</span>
+          </article>
+          <?php } ?>
         </div>
     </section>
-    <section class="clip__selection">
+    <div class="clips_left">
+    <h2>Wat ga je vertellen</h2>
+      <section class="clip__preview">
+          <video poster="" id="clip_preview" playsinline controls>
+              <source src="" type="video/mp4" />
+          </video>
+      </section>
+      <section class="clip__song">
+          <div class="gap-example hidden">
+              <audio controls loop autoplay>
+                  <source src="assets/audio/<?php echo $song; ?>.mp3" type="audio/mp3">
+                  Your browser does not support the audio element.
+              </audio>
+          </div>
+      </section>
 
+    <section class="clip__selection">
     </section>
     <form class="form" method="post" action="?page=final">
         <input type="hidden" value="" name="clip1" id="clip1">
@@ -43,6 +60,8 @@
         <input type="hidden" value="<?php echo $genre; ?>" id="genre" name="genre">
         <button disabled class="submit-btn">Toon mijn resultaat</button>
     </form>
+  </div>
+    </div>
 
 </main>
 <script src="https://cdn.plyr.io/3.5.4/plyr.js"></script>
@@ -165,6 +184,7 @@
     };
     const init = () => {
         const player = new Plyr('#clip_preview');
+        document.querySelector(`.plyr--video`).classList.add(`clips_player`);
         const $thumbnails = document.querySelectorAll(`.thumbnail__image`);
         $thumbnails.forEach(thumbnail => {
             thumbnail.addEventListener(`click`, handleClickThumbnail);
