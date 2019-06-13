@@ -34,7 +34,7 @@
     </div>
     <div class="empty-space"></div>
   </section>
-  <section class="emotie__clips">
+  <section class="emotie__clips scrolling-wrapper">
     <?php
     $i = -1;
     foreach($audio as $audioItem){
