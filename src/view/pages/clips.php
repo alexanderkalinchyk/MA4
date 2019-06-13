@@ -35,7 +35,7 @@
         </div>
     </section>
     <div class="clips_left">
-    <h2>Wat ga je vertellen</h2>
+    <h2 class="page_title">Wat ga je vertellen</h2>
       <section class="clip__preview">
           <video poster="" id="clip_preview" playsinline controls>
               <source src="" type="video/mp4" />

@@ -261,9 +261,6 @@ main {
   width: 50%;
 }
 
-.song__article {
-}
-
 .clip__thumbnail img {
   width: 30rem;
   opacity: .7;
@@ -326,10 +323,9 @@ main {
   overflow-x: hidden;
   white-space: nowrap;
   -webkit-overflow-scrolling: touch;
+}
 
-  &::-webkit-scrollbar {
-    display: none;
-  }
+.scrolling-wrapper ::-webkit-scrollbar {
 }
 
 .clips_left {
@@ -413,7 +409,7 @@ textarea {
 }
 
 .song__title {
-  order: -1;
+  order: 0;
   color: #50142d;
   font-family: Geosans, sans-serif;
   padding: 3rem;

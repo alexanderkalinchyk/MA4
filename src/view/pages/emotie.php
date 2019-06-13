@@ -110,6 +110,21 @@
 
     const init = () => {
 
+      const coll = document.querySelectorAll(".bekijk");
+      let i;
+      console.log(`hi`);
+      for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+          this.classList.toggle("active");
+          const content = this.parentElement.parentElement.querySelector(`.collapsible-content`);
+          if (content.style.display === "block") {
+            content.style.display = "none";
+          } else {
+            content.style.display = "block";
+          }
+        });
+      }
+
         const $play = document.querySelectorAll(`.play-song`);
         const $article = document.querySelectorAll(`.song__article`);
         for (let i = 0; i < $article.length; i++) {
