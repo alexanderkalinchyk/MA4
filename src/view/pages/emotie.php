@@ -1,22 +1,39 @@
 <header class="site-header container">
-    <nav>
-        <ul>
-            <li><a href="?page=genres">terug</a></li>
-            <li>
-                <h1>Kies jouw emotie</h1>
-            </li>
-            <li><a href="?page=home">terug naar start</a></li>
-        </ul>
+  <nav class="site-header">
+      <a class="active"><span>Welkom</span></a>
+      <a class="active"><span>Genre</span></a>
+      <a class="active"><span>Emotie</span></a>
+      <a><span>Verhaal</span></a>
+      <a><span>Vertel</span></a>
+      <div class="line"></div>
+      <div class="line2"></div>
     </nav>
 </header>
-<main>
-  <section>
-    <h2><?php echo $genre; ?></h2>
-    <img src="assets/img/<?php echo $genre; ?>.png" alt="genre image">
-    <p class="song-name">
-
-    </p>
+<main class="flex">
+<aside class="sidebar sidebar2">
+    <ul>
+      <li><a class="sidebar2--backbtn" href="?page=genres">⟵ Vorige</a></li>
+      <br>
+      <li><a href="?page=home">Begin opnieuw</a></li>
+    </ul>
+    <br>
+    <h1 class=" logo logo2"><span>videOpera</span></h1>
+</aside>
+<div class="emotie__container">
+  <section class="emotie__header">
+    <div class="header__content">
+    <h2>Kies jouw emotie</h2>
+      <div class="header__img-container">
+        <img src="assets/img/<?php echo $genre; ?>.png" alt="genre image">
+        <div class="header__title">
+          <h3 class="emotie__genre"><?php echo $genre; ?></h3>
+          <p class="song-name"></p>
+      </div>
+      </div>
+    </div>
+    <div class="empty-space"></div>
   </section>
+  <section class="emotie__clips">
     <?php
     $i = -1;
     foreach($audio as $audioItem){
@@ -24,7 +41,7 @@
      ?>
     <article class="song__article">
         <div class="song__container">
-            <button class="play-song">Play</button>
+          <div>
             <div class="gap-example<?php echo $i; ?>">
                 <span class="song__title"><?php echo $audioItem['audio_title']; ?></span>
                 <audio>
@@ -33,11 +50,12 @@
                 </audio>
                 <button class="bekijk">Video</button>
             </div>
-            <a
+                <a
                     href="index.php?page=clips&amp;genre=<?php echo $genre; ?>&amp;song=<?php echo $audioItem['audio_name']; ?>">Ik
                     neem deze
                 </a>
-            <div class="">
+            </div>
+            <div class="collapsible-content">
                 <video poster="assets/img/thumbnails/<?php echo $audioItem['audio_name']; ?>.jpg" id="player<?php echo $i; ?>" playsinline controls loop>
                     <source src="assets/vids/<?php echo $audioItem['audio_name']; ?>.mp4" type="video/mp4" />
                 </video>
@@ -47,6 +65,8 @@
     <?php
   }
     ?>
+    </section>
+   </div>
 </main>
 <script src="https://cdn.jsdelivr.net/gh/greghub/green-audio-player/dist/js/green-audio-player.min.js"></script>
 <script src="https://cdn.plyr.io/3.5.4/plyr.js"></script>
