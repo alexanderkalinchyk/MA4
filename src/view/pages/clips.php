@@ -10,11 +10,12 @@
     </nav>
 </header>
 <main class="flex">
-<aside class="sidebar sidebar2">
+  <aside class="sidebar sidebar2">
     <ul>
+      <br><br><br>
       <li><a class="sidebar2--backbtn" href="index.php?page=emotie&amp;genre=<?php echo $genre; ?>">⟵ Vorige</a></li>
-      <br>
-      <li><a href="?page=home">Begin opnieuw</a></li>
+      <br><br>
+      <li><a class="sidebar2--resetbtn" href="?page=home">Begin opnieuw</a></li>
     </ul>
     <br>
     <h1 class=" logo logo2"><span>videOpera</span></h1>
