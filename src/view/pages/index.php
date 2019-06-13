@@ -20,12 +20,12 @@
                 <source src="assets/vids/test.mp4" type="video/mp4" />
             </video>
         </div>
-        <div class="page1__box">
-          <div class="page1__textbox">
-            <h2 class="page1__textbox--titel">Opera & Ballet<br>zie je meer dan je denkt</h2>
+        <div class="page__box page1__box">
+          <div class="page__textbox">
+            <h2 class="page__textbox--titel">Opera & Ballet<br>zie je meer dan je denkt</h2>
             <hr>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
-            <a class="page1__box--btn" href="?page=genres">Creëer jouw verhaal ⟶</a>
+            <a class="page__box--btn" href="?page=genres">Creëer jouw verhaal ⟶</a>
           </div>
         </div>
 

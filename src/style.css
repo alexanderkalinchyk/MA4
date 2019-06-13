@@ -7,7 +7,7 @@ body {
   font-family: sans-serif;
   height: 100%;
   font-size: 2rem;
-  background: linear-gradient(135deg, #a21934 48%, #50142d 100%);
+  background: linear-gradient(to bottom, #a21934 20%, #50142d 50%);
   color: #282627;
 }
 
@@ -21,6 +21,8 @@ main {
 
 .final-result__main {
   background-image: url(assets/img/clouds2.png);
+  display: flex;
+  flex-direction: column;
 }
 
 .logo {
@@ -73,6 +75,7 @@ main {
 .page1__video {
   position: fixed;
   bottom: 0%;
+  box-shadow: .5rem -.2rem 1.4rem .3rem rgba(0, 0, 0, .3);
 }
 
 .plyr--video {
@@ -80,19 +83,30 @@ main {
   height: 78vh;
 }
 
-.page1__box {
+.page__box {
   background-color: rgba(134, 23, 50, .6);
   width: 55rem;
   height: 40rem;
+  display: flex;
+  justify-content: flex-end;
+  box-shadow: .5rem -.2rem 1.4rem .3rem rgba(0, 0, 0, .3);
+}
+
+.page1__box {
   position: relative;
   z-index: 1;
   margin-left: 110rem;
   margin-top: 38vh;
-  display: flex;
-  justify-content: flex-end;
 }
 
-.page1__textbox {
+.page2__box {
+  margin-left: -5rem;
+  margin-top: 15rem;
+  z-index: 2;
+  width: 47rem;
+}
+
+.page__textbox {
   background-color: white;
   background-image: url(assets/img/obv1.png);
   background-size: 115%;
@@ -105,7 +119,7 @@ main {
   line-height: 3rem;
 }
 
-.page1__textbox--titel {
+.page__textbox--titel {
   font-family: Rounded-Elegance, sans-serif;
   font-size: 3rem;
   line-height: 5rem;
@@ -113,7 +127,7 @@ main {
   padding-bottom: 2rem;
 }
 
-.page1__textbox hr {
+.page__textbox hr {
   border: none;
   border-top: .1rem solid #a21934;
   width: 4rem;
@@ -121,12 +135,12 @@ main {
   padding-bottom: 1rem;
 }
 
-.page1__textbox p {
+.page__textbox p {
   font-family: Geosans, sans-serif;
   padding-bottom: 5rem;
 }
 
-.page1__box--btn {
+.page__box--btn {
   text-decoration: none;
   font-family: Geosans, sans-serif;
   font-size: 2rem;
@@ -139,7 +153,11 @@ main {
   border: .1rem solid white;
 }
 
-.page1__box--btn:active {
+.page__box--btn2 {
+  text-decoration: underline;
+}
+
+.page__box--btn:active {
   background-color: #50142d;
 }
 
@@ -159,6 +177,19 @@ main {
   padding-left: 4rem;
   padding-right: 4rem;
   text-align: center;
+  box-shadow: .3rem .4rem 1.4rem .2rem rgba(0, 0, 0, .2);
+}
+
+.resetbtn {
+  width: 25rem;
+  color: white;
+  font-family: Geosans, sans-serif;
+  background-color: #fa1e3c;
+  padding: 2rem;
+  text-align: center;
+  margin-left: 80%;
+  margin-top: 4rem;
+  box-shadow: .3rem .4rem 1.4rem .2rem rgba(0, 0, 0, .2);
 }
 
 .sidebar2--resetbtn {
@@ -283,14 +314,18 @@ main {
   box-shadow: 0 0 3.3rem -.4rem rgba(0, 0, 0, .52);
 }
 
+.clips_left {
+  text-align: center;
+}
+
 .clip__preview {
-  width: 50%;
+  width: 70%;
   margin: 2rem;
 }
 
 .clips_player {
-  width: 118rem;
-  height: 30rem;
+  width: 70vh;
+  height: 100%;
   border-radius: 2rem;
 }
 
@@ -442,4 +477,20 @@ textarea {
   background-color: #f1f1f1;
 }
 
+.final-clip1 {
+  width: 115rem;
+  height: 64rem;
+  margin-top: 10rem;
+  margin-left: 5rem;
+}
 
+.final-clip2 {
+  width: 115rem;
+  height: 64rem;
+}
+
+.final-result__section {
+  width: 100%;
+  margin: 0;
+  display: flex;
+}
