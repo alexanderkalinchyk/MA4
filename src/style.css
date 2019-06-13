@@ -52,6 +52,11 @@ main {
   flex-flow: column;
   justify-content: space-between;
   background-color: rgba(255, 255, 255, .3);
+  background-image: url(assets/img/obv2.png);
+  background-repeat: no-repeat;
+  background-position-x: 0;
+  background-position-y: 0;
+  background-size: cover;
 }
 
 .page1 {
@@ -134,6 +139,13 @@ main {
   background-color: #50142d;
 }
 
+.page_title {
+  font-family: Rounded-Elegance, sans-serif;
+  color: white;
+  font-size: 3.4rem;
+  letter-spacing: .3rem;
+}
+
 .sidebar2--backbtn {
   text-decoration: none;
   color: white;
@@ -142,13 +154,47 @@ main {
   padding: 2rem;
   padding-left: 4rem;
   padding-right: 4rem;
-
   text-align: center;
 }
 
+.sidebar2--resetbtn {
+  font-family: Geosans, sans-serif;
+  color: #50142d;
+  letter-spacing: .3rem;
+}
+
 .genres__section {
+  position: absolute;
+  z-index: 1;
   margin: 0 auto;
-  width: 50%;
+  margin-top: 10%;
+  width: 100%;
+  text-align: center;
+}
+
+.genres {
+  margin-top: 5vh;
+}
+
+.genres__box {
+  width: 100%;
+  vertical-align: middle;
+  margin-top: -3rem;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-evenly;
+}
+
+.genres__btn {
+  width: 30vw;
+}
+
+.genres__box2 {
+  margin-top: 1vh;
+}
+
+.genres__btn--span {
+  display: none;
 }
 
 .plyr__control--overlaid {
