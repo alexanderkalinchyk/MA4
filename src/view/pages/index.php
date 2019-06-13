@@ -24,7 +24,7 @@
           <div class="page__textbox">
             <h2 class="page__textbox--titel">Opera & Ballet<br>zie je meer dan je denkt</h2>
             <hr>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
+            <p>Operamuziek zit vol met rauwe emotie, hierdoor kiezen Vele regisseurs ervoor hun verhaal er mee te ondersteunen. Creëer jouw eigen verhaal en versterk het met opera.</p>
             <a class="page__box--btn" href="?page=genres">Creëer jouw verhaal ⟶</a>
           </div>
         </div>

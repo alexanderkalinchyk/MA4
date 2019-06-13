@@ -30,22 +30,27 @@
           <div class="page__textbox">
             <h2 class="page__textbox--titel">Deel je verhaal met<br>ons en vele anderen</h2>
             <hr>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
+            <p class="page__textbox--finaltext">Een ongedeeld verhaal is zonde. Deel jouw creatie via onze facebook pagina met de wereld, en wie weet inspireer je één van onze volgende producties.</p>
             <a class="page__box--btn page__box--btn2" href="index.php?page=facebook&amp;name=<?php echo $audio; ?>" onclick="window.open('index.php?page=facebook&name=<?php echo $audio; ?>',
                           'newwindow',
                           'width=500,height=800');
                 return false;">Deel je verhaal met ons</a>
           </div>
         </div>
+        <div class='icon-scroll'><div/>
   </section>
   <br>
-  <section class="final-result__section">
-  <div>
-      <video poster="" id="bestaande_verhaal" controls class="video-player" src="assets/vids/<?php echo $bestaandeClip["clip_name"]; ?>.mp4" ></video>
-      <div>
+  <section class="final-result__section final-result__section2">
+    <div class="page__textbox final-extra-content">
+      <h3 class="page__textbox--titel bigger-titel">Opera & Film</h3>
+      <br>
+      <hr>
+      <br>
+      <p>Opera dompeld je net als film onder in een andere wereld. met dezelfde thema’s en emoties zijn ze meer gelijkend dan je denkt. Kom eens kijken en ontdek deze nieuwe werelden</p>
+</div>
+  <div class="final-result__extra-vid">
       <h2 class="page_title">Meer gelijkend dan je denkt...</h2>
-        <p><?php echo $bestaandeClip["tekst"]; ?></p>
-      </div>
+      <video poster="" id="bestaande_verhaal" controls class="video-player" src="assets/vids/<?php echo $bestaandeClip["clip_name"]; ?>.mp4" ></video>
 </div>
   </section>
 </main>
