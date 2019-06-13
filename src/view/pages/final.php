@@ -57,6 +57,8 @@
   const init = () =>{
     const player = new Plyr('#jouw_verhaal');
     const player2 = new Plyr('#bestaande_verhaal');
+    player.parentElement.parentElement.classList.add(`final-clip1`);
+    player2.parentElement.parentElement.classList.add(`final-clip2`);
 
     const $vidPlayer = document.querySelector(`.video-player`);
     const myVids = [];
