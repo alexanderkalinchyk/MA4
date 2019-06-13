@@ -25,13 +25,13 @@
     <div class="genres">
       <div class="genres__box">
         <div class="genres__box1">
-          <a class="genres__box-btn" href="index.php?page=emotie&amp;genre=tragedie"><img class="genres__btn" src="assets/img/genre1.png" alt="Tragedie"><span class="genres__btn--span">Tragedie</span></a>
-          <a class="genres__box-btn" href="index.php?page=emotie&amp;genre=romantiek"><img class="genres__btn" src="assets/img/genre2.png" alt="Romantiek"><span class="genres__btn--span">Romantiek</span></a>
+          <a class="genres__box-btn" href="index.php?page=emotie&amp;genre=tragedie"><img class="genres__btn" src="assets/img/genreA.png" alt="Tragedie"><span class="genres__btn--span">Tragedie</span></a>
+          <a class="genres__box-btn" href="index.php?page=emotie&amp;genre=romantiek"><img class="genres__btn" src="assets/img/genreB.png" alt="Romantiek"><span class="genres__btn--span">Romantiek</span></a>
         </div>
         <br>
         <div class="genres__box2">
-          <a class="genres__box-btn" href="index.php?page=emotie&amp;genre=komedie"><img class="genres__btn" src="assets/img/genre3.png" alt="Komedie"><span class="genres__btn--span">Komedie</span></a>
-          <a class="genres__box-btn" href="index.php?page=emotie&amp;genre=fantasie"><img class="genres__btn" src="assets/img/genre4.png" alt="Fantasie"><span class="genres__btn--span">Fantasie</span></a>
+          <a class="genres__box-btn" href="index.php?page=emotie&amp;genre=komedie"><img class="genres__btn" src="assets/img/genreC.png" alt="Komedie"><span class="genres__btn--span">Komedie</span></a>
+          <a class="genres__box-btn" href="index.php?page=emotie&amp;genre=fantasie"><img class="genres__btn" src="assets/img/genreD.png" alt="Fantasie"><span class="genres__btn--span">Fantasie</span></a>
         </div>
     </div>
 </section>
