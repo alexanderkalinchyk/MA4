@@ -22,7 +22,7 @@
 <div class="emotie__container">
   <section class="emotie__header">
     <div class="header__content">
-    <h2>Kies jouw emotie</h2>
+    <h2 class="page_title">Kies jouw emotie</h2>
       <div class="header__img-container">
         <img src="assets/img/<?php echo $genre; ?>.png" alt="genre image">
         <div class="header__title">
