@@ -9,7 +9,7 @@
       <div class="line2"></div>
     </nav>
 </header>
-<main class="flex">
+<main class="flex bg-main">
   <aside class="sidebar sidebar2">
     <ul>
       <br><br><br>

@@ -9,7 +9,7 @@
       <div class="line2"></div>
     </nav>
 </header>
-<main>
+<main class="bg-main">
     <aside class="sidebar">
       <br>
       <h1 class="logo"><span>videOpera</span></h1>

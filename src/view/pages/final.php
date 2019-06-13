@@ -9,7 +9,7 @@
       <div class="line2"></div>
     </nav>
 </header>
-<main class="main final-result__main">
+<main class="bg-main final-result__main">
 <a class="resetbtn" href="?page=home">Terug naar start</a>
   <section class="clip__preview final-result__section">
     <div>
