@@ -31,6 +31,6 @@
 </section>
 <section class="fb__section5">
   <button class="cancel-btn">Cancel</button>
-  <button class="post-btn">Post to Facebook</button>
+  <a href="index.php" class="post-btn">Post to Facebook</a>
 </section>
 </main>
