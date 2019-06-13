@@ -46,17 +46,7 @@
       <h2 class="page_title">Meer gelijkend dan je denkt...</h2>
         <p><?php echo $bestaandeClip["tekst"]; ?></p>
       </div>
-<<<<<<< HEAD
-  </section>
-  <section>
-      <a href="index.php?page=facebook&amp;name=<?php echo $audio; ?>"
-    onclick="window.open('index.php?page=facebook&name=<?php echo $audio; ?>',
-                         'newwindow',
-                         'width=500,height=800');
-              return false;">Deel je verhaal met ons</a>
-=======
-  </div>
->>>>>>> 45611ccc1413ec7a8ced453ca0d2f35d818c7f40
+</div>
   </section>
 </main>
 <script src="https://cdn.plyr.io/3.5.4/plyr.js"></script>
