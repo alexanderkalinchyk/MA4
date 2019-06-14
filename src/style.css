@@ -431,6 +431,7 @@ body {
   margin-top: 3rem;
   background-color: #a21833;
   color: white;
+  outline: none;
 }
 
 .submit-btn:disabled {
@@ -633,7 +634,7 @@ textarea {
 }
 
 .fb__section4,
-.fb__section4 img {
+.fb__section4 video {
   width: 48rem;
 }
 

@@ -21,9 +21,9 @@
 
 </section>
 <section class="fb__section4">
-  <img src="assets/img/thumbnails/<?php echo $name; ?>.jpg" alt="<?php echo $name; ?>">
+  <video controls src="<?php echo $name; ?>"></video>
   <div class="clip-name">
-    Jouw verhaal - <?php echo $name; ?>.mp4 <br>
+    Jouw verhaal.mp4 <br>
     <span class="light">Deel jouw verhaal met duizenden andere mensen op onze facebook pagina!</span>
   </div>
   <div>

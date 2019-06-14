@@ -57,7 +57,7 @@
                 </a>
             </div>
             <div class="collapsible-content">
-                <video poster="assets/img/thumbnails/<?php echo $audioItem['audio_name']; ?>.jpg" id="player<?php echo $i; ?>" playsinline controls loop>
+                <video id="player<?php echo $i; ?>" playsinline controls loop>
                     <source src="assets/vids/<?php echo $audioItem['audio_name']; ?>.mp4" type="video/mp4" />
                 </video>
             </div>

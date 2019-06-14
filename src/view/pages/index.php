@@ -16,7 +16,7 @@
     </aside>
     <div class="page1 flex">
         <div class="page1__video">
-            <video poster="assets/img/thumbnails/demo.jpg" id="player" playsinline controls loop>
+            <video poster="assets/img/demo.jpg" id="player" playsinline controls loop>
                 <source src="assets/vids/demo.mp4" type="video/mp4" />
             </video>
         </div>

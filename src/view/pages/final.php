@@ -31,7 +31,7 @@
             <h2 class="page__textbox--titel">Deel je verhaal met<br>ons en vele anderen</h2>
             <hr>
             <p class="page__textbox--finaltext">Een ongedeeld verhaal is zonde. Deel jouw creatie via onze facebook pagina met de wereld, en wie weet inspireer je één van onze volgende producties.</p>
-            <a class="page__box--btn page__box--btn2" href="index.php?page=facebook&amp;name=<?php echo $audio; ?>" onclick="window.open('index.php?page=facebook&name=<?php echo $audio; ?>',
+            <a class="page__box--btn page__box--btn2" href="index.php?page=facebook&amp;name=<?php echo $clip1; ?>" onclick="window.open('index.php?page=facebook&name=<?php echo $clip1; ?>',
                           'newwindow',
                           'width=500,height=800');
                 return false;">Deel je verhaal met ons</a>
