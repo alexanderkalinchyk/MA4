@@ -431,6 +431,7 @@ body {
   margin-top: 3rem;
   background-color: #a21833;
   color: white;
+  outline: none;
 }
 
 .submit-btn:disabled {
